@@ -1,0 +1,29 @@
+<div class="about-wrapper">
+  <div class="about-left">
+    <div class="about-left-content">
+      <div>
+        <div class="shadow">
+          <div class="about-img">
+            @if (data) {
+            <img [src]="data.avatar_url" alt="about image" />
+            }
+          </div>
+        </div>
+
+        <h2>Juan<br />Barraza</h2>
+        <h3>Estudiante UTN FRA</h3>
+      </div>
+
+      <ul class="icons"></ul>
+    </div>
+  </div>
+
+  <div class="about-right">
+    <h1>Sobre mi<span>!</span></h1>
+    <div class="about-para">
+      @if(data){
+      <p>Login: {{ data.login }}</p>
+      }
+    </div>
+  </div>
+</div>

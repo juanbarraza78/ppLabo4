@@ -1,0 +1,53 @@
+<!-- Form -->
+<h4 class="mt-5 mb-3">Alta Producto</h4>
+<form class="needs-validation" [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div class="row g-3">
+    <!-- Descripcion -->
+    <div class="col-sm-12">
+      <label for="firstName" class="form-label">Nombre Producto</label>
+      <input
+        formControlName="descripcion"
+        type="text"
+        class="form-control"
+        id="firstName"
+        placeholder=""
+        value=""
+        required=""
+      />
+      <div class="invalid-feedback">Campo Obligatorio</div>
+    </div>
+    <!-- Precio -->
+    <div class="col-12">
+      <label for="username" class="form-label">Precio</label>
+      <div class="input-group has-validation">
+        <input type="number" class="form-control" formControlName="precio" />
+        <div class="invalid-feedback">Campo Obligatorio</div>
+      </div>
+    </div>
+    <!-- Stock -->
+    <div class="col-12">
+      <label for="username" class="form-label">Stock</label>
+      <div class="input-group has-validation">
+        <input type="number" class="form-control" formControlName="stock" />
+        <div class="invalid-feedback">Campo Obligatorio</div>
+      </div>
+    </div>
+    <!-- Es comestible -->
+    <div class="col-md-4">
+      <label for="state" class="form-label">Es comestible?</label>
+      <select class="form-select" formControlName="comestible">
+        <option value="true">Si</option>
+        <option value="false">No</option>
+      </select>
+      <div class="invalid-feedback">Campo Obligatorio</div>
+    </div>
+  </div>
+  <!-- Boton -->
+  <button
+    class="w-100 btn btn-primary btn-lg mt-5"
+    type="submit"
+    [disabled]="!form.valid"
+  >
+    Continue to checkout
+  </button>
+</form>

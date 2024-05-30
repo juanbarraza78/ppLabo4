@@ -1,0 +1,28 @@
+<app-lista-producto
+  [productos]="productos"
+  (event)="eventActoresPadre($event)"
+></app-lista-producto>
+<app-detalle-producto [producto]="producto"></app-detalle-producto>
+
+<!-- Detalle del Pais -->
+@if(pais){
+<h2 class="h1 container mt-4">Detalle Pais</h2>
+<div class="container d-flex justify-content-center align-items-center">
+  <div class="card" style="width: 18rem">
+    <img src="{{ pais.flags.png }}" alt="" />
+    <div class="card-body">
+      <h5 class="card-title">
+        {{ pais.name.common }}
+      </h5>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">
+        Capital: <span>{{ pais.capital[0] }}</span>
+      </li>
+      <li class="list-group-item">
+        Continente: <span>{{ pais.continents[0] }}</span>
+      </li>
+    </ul>
+  </div>
+</div>
+}

@@ -44,15 +44,9 @@ export class LoginComponent {
   }
 
   userA() {
-    this.form.setValue({ email: 'kopop74796@idsho.com', password: 'asd123' });
+    this.form.setValue({ email: 'admin@gmail.com', password: '111111' });
   }
   userB() {
-    this.form.setValue({ email: 'palmiharze@gufum.com', password: 'asd123' });
-  }
-  userC() {
-    this.form.setValue({
-      email: 'jeniffer93408@wlks.crankymonkey.info',
-      password: 'asd123',
-    });
+    this.form.setValue({ email: 'empleado@gmail.com', password: '111111' });
   }
 }

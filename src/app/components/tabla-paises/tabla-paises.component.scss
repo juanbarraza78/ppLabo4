@@ -1,0 +1,8 @@
+.list-container {
+  max-height: 100%;
+  overflow-y: auto;
+  max-width: 100%;
+}
+.list-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, and Opera */
+}

@@ -1,0 +1,24 @@
+<div class="p-5 text-white bg-dark rounded-3">
+  <div class="card rounded-3" style="width: 18rem">
+    <div class="card-body">
+      <h5 class="card-title">{{ producto?.descripcion }}</h5>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">
+        Id: <span>{{ producto?.codigo }}</span>
+      </li>
+      <li class="list-group-item">
+        Pais de Origen: <span>{{ producto?.paisOrigen }}</span>
+      </li>
+      <li class="list-group-item">
+        Precio: <span>{{ producto?.precio }}</span>
+      </li>
+      <li class="list-group-item">
+        Stock: <span>{{ producto?.stock }}</span>
+      </li>
+      <li class="list-group-item">
+        Es Comestible?: <span>{{ producto?.comestible }}</span>
+      </li>
+    </ul>
+  </div>
+</div>

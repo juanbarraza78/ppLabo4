@@ -15,11 +15,31 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
+        @if(this.authService.currentUserSig() == null){
         <li class="nav-item">
           <a class="nav-link" routerLink="/login">Login</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" routerLink="/register">Register</a>
+        </li>
+        } @if(this.authService.currentUserSig()){
+        <li class="nav-item" (click)="logout()">
+          <a class="nav-link">Salir</a>
+        </li>
+        }
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/altaProducto">Alta Productos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/mostrarProductos"
+            >Mostrar Productos</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/listarProductos">Listar Productos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/abmProductos">Abm Productos</a>
         </li>
       </ul>
     </div>
