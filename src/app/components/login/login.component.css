@@ -1,0 +1,11 @@
+.colorMain {
+  background-color: #009970;
+}
+.btnDefault {
+  border-radius: 100%;
+}
+.containerBtn {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
